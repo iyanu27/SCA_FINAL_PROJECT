@@ -26,22 +26,22 @@ Lets get started by fetching the demo Laravel application from its Github reposi
 
  I created a new .env file to customize the configuration options for the development environment we’re setting up. Laravel comes with  an example.env file that we can copy to create our own:
 
-sudo cp .env.example .env,open with nano .env
+      sudo cp .env.example .env,open with nano .env
 
-APP_NAME=laravel-vue-spa
-APP_ENV=dev
-APP_KEY=
-APP_DEBUG=true
-APP_URL=34.67.89.10
+     APP_NAME=laravel-vue-spa
+    APP_ENV=dev
+    APP_KEY=
+    APP_DEBUG=true
+    APP_URL=34.67.89.10
 
-LOG_CHANNEL=stack
+    LOG_CHANNEL=stack
 
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=iyanudb
-DB_USERNAME=Iyanu
-DB_PASSWORD=iyanu
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=iyanudb
+    DB_USERNAME=Iyanu
+    DB_PASSWORD=iyanu
 
 # Step 3 — Setting Up the Application’s Dockerfile
  #I created a new Dockerfile with the following configuration as shown below and named it "Dockerfile.prod"
