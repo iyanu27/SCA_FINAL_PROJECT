@@ -31,13 +31,15 @@ Lets get started by fetching the demo Laravel application from its Github reposi
  
 I created a new Dockerfile with the following configuration and named it "Dockerfile.prod"
      
-# Step 4 — Creating a Multi-Container Environment with Docker Compose named it "docker-compose-production.yml"
-    
+# Step 4 — Creating a Multi-Container Environment with Docker Compose 
+
+I created a new docker-compose attached in this repository and named it "docker-compose-production.yml" 
 
 # step 5-I run the application in production mode simply run docker-compose -f docker-compose.production.yml up -d to up the service.
 
 
 ## PHASE 2- PUSH THE BUILT IMAGE TO DOCKER HUB REPOSITORY
+
  The image registry i will be using is Docker Hub. First, your account has to be created, then create a repository with any name, i 
  named it laravelvuejsapplication. Now, let see the steps i followed: 
 
