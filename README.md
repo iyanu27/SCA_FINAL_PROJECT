@@ -35,8 +35,11 @@ I created a new Dockerfile with the following configuration and named it "Docker
 
 I created a new docker-compose attached in this repository and named it "docker-compose-production.yml" 
 
-# step 5-I run the application in production mode simply run docker-compose -f docker-compose.production.yml up -d to up the service.
+# step 5-I run the application in production mode 
 
+simply run docker-compose -f docker-compose.production.yml up -d to up the service.
+
+simply run docker-compose -f docker-compose.production.yml down  to stop the service.
 
 ## PHASE 2- PUSH THE BUILT IMAGE TO DOCKER HUB REPOSITORY
 
