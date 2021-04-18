@@ -165,7 +165,8 @@ networks:
 
 
 ## PHASE 2- PUSH THE BUILT IMAGE TO DOCKER HUB REPOSITORY
- The image registry i will be using is Docker Hub. First, your account has to be created, then create a repository with any name, we’ve named it laravelvuejsapplication. Now, let see the steps i followed: 
+ The image registry i will be using is Docker Hub. First, your account has to be created, then create a repository with any name, i 
+ named it laravelvuejsapplication. Now, let see the steps i followed: 
 
 
 
