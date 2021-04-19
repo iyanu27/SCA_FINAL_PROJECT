@@ -43,8 +43,37 @@ simply run docker-compose -f docker-compose.production.yml down  to stop the ser
 
 ## PHASE 2- PUSH THE BUILT IMAGE TO DOCKER HUB REPOSITORY
 
- The image registry i will be using is Docker Hub. First, your account has to be created, then create a repository with any name, i 
+ a. The image registry i will be using is Docker Hub. First, your account has to be created, then create a repository with any name, i 
  named it laravelvuejsapplication. Now, let see the steps i followed: 
+  
+![image](https://user-images.githubusercontent.com/57386428/115301887-a5ec2080-a116-11eb-8dbc-18d479fd8fe1.png)
+
+b.To push the built image to docker hub repository,i ran the command docker ps to get the container id of the image
+![image](https://user-images.githubusercontent.com/57386428/115302041-d469fb80-a116-11eb-8cfd-07c75c51cdff.png)
+
+c. Then, “sudo docker commit 1d96f9d249ac iyanu27/laravelvuejsapplication” to commit the images  and “sudo docker push iyanu27/laravelvuejsapplication” to push the application to my laravelvuejs repository 
+
+![image](https://user-images.githubusercontent.com/57386428/115302140-f3688d80-a116-11eb-8ea8-79c03627e170.png)
+
+d. After the application has been pushed to docker hub repository,lets verify the status on docker hub
+
+![image](https://user-images.githubusercontent.com/57386428/115302233-12ffb600-a117-11eb-8900-44d97d76d245.png)
+
+## PHASE 3: How to push the dockerized image to kubernetes
+a.  I Installed minikube  use this link minikube start | minikube (k8s.io)
+
+![image](https://user-images.githubusercontent.com/57386428/115302393-3e82a080-a117-11eb-8ccc-bbdd37258918.png)
+
+
+![image](https://user-images.githubusercontent.com/57386428/115302486-55c18e00-a117-11eb-8274-cb2314eddad3.png)
+
+## PHASE 4:  Define YAML File To Create A Deployment In Kubernetes Cluster
+
+
+
+
+
+
 
 
 
