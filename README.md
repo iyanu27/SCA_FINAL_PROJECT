@@ -74,28 +74,54 @@ a.  I Installed minikube  use this link minikube start | minikube (k8s.io)
 
 ## PHASE 4:  Define YAML File To Create A Deployment In Kubernetes Cluster
 
-I created a Kubernetes cluster with terraform,i will be deploying the dockerized image to the container,kubernetes cluster shown below:
+a. I created a Kubernetes cluster with terraform,i will be deploying the dockerized image to the container,kubernetes cluster shown below:
 
 ![image](https://user-images.githubusercontent.com/57386428/115378625-9657f080-a185-11eb-8edd-f9c58def477e.png)
 
-Create a file named it deployment.yml that consist the following configuration
+b. Create a file named it deployment.yml that consist the following configuration
        
 ![image](https://user-images.githubusercontent.com/57386428/115378770-bf788100-a185-11eb-8f69-185a2450eacf.png)
 
     Note: i made sure the image is the name of the dockerized image being pushed to docker hub
     
-  I connected to my Google kubernetes cluster on GCP using cloud shell and by clicking connect
+c.  I connected to my Google kubernetes cluster on GCP using cloud shell and by clicking connect
   
   ![image](https://user-images.githubusercontent.com/57386428/115423351-97ebdd80-a1b2-11eb-9f1a-046128ae6a55.png)
-
-To check the nodes,i used kubectl nodes
+  
+d.Added a deployment.yaml and service.yaml file as shown below to create the deployment
+  ![image](https://user-images.githubusercontent.com/57386428/115453730-cf6b8180-a1d4-11eb-9091-2b2d75c34543.png)
  
-
+![image](https://user-images.githubusercontent.com/57386428/115454731-f6768300-a1d5-11eb-972d-22cd873b8f09.png)
+   
+e. To create the deployment, i used the command 
     
+    kubectl create -f deployment.yml
+    
+![image](https://user-images.githubusercontent.com/57386428/115453313-59671a80-a1d4-11eb-860f-3abf431fc053.png)
+
+ f.I was able to view the deployment and the created pods by running kubectl get deployments and kubectl get pods
+ 
+ ![image](https://user-images.githubusercontent.com/57386428/115454153-4dc82380-a1d5-11eb-87c0-48a268dc6942.png)
+ 
+ g. The Kubernetes master creates the load balancer and related Compute Engine forwarding rules, target pools, and firewall rules to make the service fully accessible from outside of Google Cloud Platform.To create the service run 
+     kubectl create -f service.yml
+
+![image](https://user-images.githubusercontent.com/57386428/115455216-83b9d780-a1d6-11eb-8b4d-679e83a45717.png)
+
+h. Once the service is created, i can get the externally accessible IP address by listing all the services (kubectl get services). The external IP may take a few seconds to be visible.I got this.
+ 
+![image](https://user-images.githubusercontent.com/57386428/115455493-e1e6ba80-a1d6-11eb-8285-579c870ed759.png)
+
+![image](https://user-images.githubusercontent.com/57386428/115456057-9680dc00-a1d7-11eb-90c9-0d7d83672a8e.png)
+
     
  Refrences:
+ 
  Installation of Google cloud SDK
  https://www.linuxtechi.com/setup-kubernetes-cluster-google-cloud-platform-gcp/
+Installation of Google Kubernetes and deployment yaml
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://scotch.io/tutorials/google-cloud-platform-i-deploy-a-docker-app-to-google-container-engine-with-kubernetes
  
     
 
