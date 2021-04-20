@@ -69,15 +69,8 @@ d. After the application has been pushed to docker hub repository,lets verify th
 
 ![image](https://user-images.githubusercontent.com/57386428/115302233-12ffb600-a117-11eb-8900-44d97d76d245.png)
 
-## PHASE 3: How to push the dockerized image to kubernetes
-a.  I Installed minikube  use this link minikube start | minikube (k8s.io)
 
-![image](https://user-images.githubusercontent.com/57386428/115302393-3e82a080-a117-11eb-8ccc-bbdd37258918.png)
-
-
-![image](https://user-images.githubusercontent.com/57386428/115302486-55c18e00-a117-11eb-8274-cb2314eddad3.png)
-
-## PHASE 4:  Define YAML File To Create A Deployment In Kubernetes Cluster
+## PHASE 3:  Define YAML File To Create A Deployment In Kubernetes Cluster
 
 a. I created a Kubernetes cluster with terraform,i will be deploying the dockerized image to the container,kubernetes cluster shown below:
 
