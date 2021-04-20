@@ -16,6 +16,11 @@ Docker installed on your ubuntu  server,i used  this link https://www.digitaloce
 
 Docker Compose installed on your server,i used this link https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
+# THINGS TO NOTE FIRST
+ Create a SQL databse and kubernetes cluster using Terraform ,the github to provision this is ......
+ 
+
+
 # Step 1 — Obtaining the Demo Laravel,Vuejs Application
 
 Lets get started by fetching the demo Laravel application from its Github repository.
@@ -68,6 +73,18 @@ a.  I Installed minikube  use this link minikube start | minikube (k8s.io)
 ![image](https://user-images.githubusercontent.com/57386428/115302486-55c18e00-a117-11eb-8274-cb2314eddad3.png)
 
 ## PHASE 4:  Define YAML File To Create A Deployment In Kubernetes Cluster
+
+I created a Kubernetes cluster with terraform,i will be deploying the dockerized image to the container,kubernetes cluster shown below:
+
+![image](https://user-images.githubusercontent.com/57386428/115378625-9657f080-a185-11eb-8edd-f9c58def477e.png)
+
+Create a file named it deployment.yml that consist the following configuration
+       
+![image](https://user-images.githubusercontent.com/57386428/115378770-bf788100-a185-11eb-8f69-185a2450eacf.png)
+
+    Note: i made sure the image is the name of the dockerized image being pushed to docker hub
+    
+    
 
 
 
