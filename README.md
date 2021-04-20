@@ -34,15 +34,20 @@ Lets get started by fetching the demo Laravel application from its Github reposi
 
 # Step 3 — Setting Up the Application’s Dockerfile
  
-I created a new Dockerfile with the following configuration and named it "Dockerfile.prod"
+I created a new Dockerfile with the following configuration and named it "Dockerfile.prod",attached in the this repository
+![image](https://user-images.githubusercontent.com/57386428/115456927-99300100-a1d8-11eb-8f77-8fdd8aba3d5a.png)
      
 # Step 4 — Creating a Multi-Container Environment with Docker Compose 
 
 I created a new docker-compose attached in this repository and named it "docker-compose-production.yml" 
 
+![image](https://user-images.githubusercontent.com/57386428/115457025-be247400-a1d8-11eb-8909-1dc7fdbbe28d.png)
+
 # step 5-I run the application in production mode 
 
 simply run docker-compose -f docker-compose.production.yml up -d to up the service.
+
+![image](https://user-images.githubusercontent.com/57386428/115457099-ddbb9c80-a1d8-11eb-8256-130dd261f4d4.png)
 
 simply run docker-compose -f docker-compose.production.yml down  to stop the service.
 
