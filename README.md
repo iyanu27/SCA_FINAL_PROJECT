@@ -91,7 +91,7 @@ c.  I connected to my Google kubernetes cluster on GCP using cloud shell and by 
 d.Added a deployment.yaml and service.yaml file as shown below to create the deployment
   ![image](https://user-images.githubusercontent.com/57386428/115453730-cf6b8180-a1d4-11eb-9091-2b2d75c34543.png)
  
-![image](https://user-images.githubusercontent.com/57386428/115454731-f6768300-a1d5-11eb-972d-22cd873b8f09.png)
+ ![image](https://user-images.githubusercontent.com/57386428/115464130-7524ed80-a1e1-11eb-98ba-7f34fd3aa29d.png)
    
 e. To create the deployment, i used the command 
     
@@ -111,12 +111,11 @@ e. To create the deployment, i used the command
 h. Once the service is created, i can get the externally accessible IP address by listing all the services (kubectl get services). The external IP may take a few seconds to be visible.I got this.
  
 
-![image](https://user-images.githubusercontent.com/57386428/115461037-d0ed7780-a1dd-11eb-9c9e-94e8ec7f9c39.png)
-
+![image](https://user-images.githubusercontent.com/57386428/115464228-9f76ab00-a1e1-11eb-8cf7-d4a09bb91fe3.png)
 
 ![image](https://user-images.githubusercontent.com/57386428/115456057-9680dc00-a1d7-11eb-90c9-0d7d83672a8e.png)
 
-![image](https://user-images.githubusercontent.com/57386428/115461351-29247980-a1de-11eb-9243-d145475f4d2b.png)
+![image](https://user-images.githubusercontent.com/57386428/115464405-e369b000-a1e1-11eb-8cf9-7f4a1b070173.png)
 
     
  Refrences:
