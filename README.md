@@ -110,7 +110,9 @@ e. To create the deployment, i used the command
 
 h. Once the service is created, i can get the externally accessible IP address by listing all the services (kubectl get services). The external IP may take a few seconds to be visible.I got this.
  
-![image](https://user-images.githubusercontent.com/57386428/115455493-e1e6ba80-a1d6-11eb-8285-579c870ed759.png)
+
+![image](https://user-images.githubusercontent.com/57386428/115461037-d0ed7780-a1dd-11eb-9c9e-94e8ec7f9c39.png)
+
 
 ![image](https://user-images.githubusercontent.com/57386428/115456057-9680dc00-a1d7-11eb-90c9-0d7d83672a8e.png)
 
