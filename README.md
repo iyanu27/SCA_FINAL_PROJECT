@@ -17,7 +17,8 @@ Docker installed on your ubuntu  server,i used  this link https://www.digitaloce
 Docker Compose installed on your server,i used this link https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
 # THINGS TO NOTE FIRST
- Create a SQL databse and kubernetes cluster using Terraform ,the github to provision this is infrastructure and the step by step guide 
+ Create a SQL databse and kubernetes cluster using Terraform ,the github to provision this is infrastructure and the step by step guide
+ 
       https://github.com/iyanu27/SCA-TASKS/tree/main/Week%209
  
 ## PHASE 1-Dockerizing the laravel and vuejs application
