@@ -116,6 +116,8 @@ h. Once the service is created, i can get the externally accessible IP address b
 
 ![image](https://user-images.githubusercontent.com/57386428/115456057-9680dc00-a1d7-11eb-90c9-0d7d83672a8e.png)
 
+![image](https://user-images.githubusercontent.com/57386428/115461351-29247980-a1de-11eb-9243-d145475f4d2b.png)
+
     
  Refrences:
  
