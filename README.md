@@ -117,6 +117,9 @@ h. Once the service is created, i can get the externally accessible IP address b
 
 ![image](https://user-images.githubusercontent.com/57386428/115464405-e369b000-a1e1-11eb-8cf9-7f4a1b070173.png)
 
+i.To access the kubernetes,i accessed it with the externalIpaddress:80
+
+
     
  Refrences:
  
