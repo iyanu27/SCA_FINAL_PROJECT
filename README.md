@@ -84,7 +84,7 @@ Create a file named it deployment.yml that consist the following configuration
 
     Note: i made sure the image is the name of the dockerized image being pushed to docker hub
     
-  I connected to my Google kubernetes cluster on GCP using cloud shell
+  I connected to my Google kubernetes cluster on GCP using cloud shell and by clicking connect
   
   ![image](https://user-images.githubusercontent.com/57386428/115423351-97ebdd80-a1b2-11eb-9f1a-046128ae6a55.png)
 
@@ -95,9 +95,7 @@ To check the nodes,i used kubectl nodes
     
  Refrences:
  Installation of Google cloud SDK
- https://www.techrepublic.com/article/how-to-install-google-cloud-sdk-on-linux-for-easy-remote-access-to-your-google-cloud-platform/
- 
-
+ https://www.linuxtechi.com/setup-kubernetes-cluster-google-cloud-platform-gcp/
  
     
 
