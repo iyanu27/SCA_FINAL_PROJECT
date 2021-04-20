@@ -17,33 +17,34 @@ Docker installed on your ubuntu  server,i used  this link https://www.digitaloce
 Docker Compose installed on your server,i used this link https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
 # THINGS TO NOTE FIRST
- Create a SQL databse and kubernetes cluster using Terraform ,the github to provision this is ......
+ Create a SQL databse and kubernetes cluster using Terraform ,the github to provision this is infrastructure and the step by step guide 
+      https://github.com/iyanu27/SCA-TASKS/tree/main/Week%209
  
+## PHASE 1-Dockerizing the laravel and vuejs application
 
-
-# Step 1 — Obtaining the Demo Laravel,Vuejs Application
+a. Obtaining the Demo Laravel,Vuejs Application
 
 Lets get started by fetching the demo Laravel application from its Github repository.
 
          https://github.com/cretueusebiu/laravel-vue-spa
 
-# Step 2 — Setting Up the Application’s .env File
+b.Setting Up the Application’s .env File
   The Laravel configuration files are located in a directory called config, inside the application’s root directory. Additionally, a .env file is used to set up environment-dependent configuration, such as credentials and any information that might vary between deploys. 
 
  I created a new .env file to customize the configuration options for the development environment we’re setting up. Laravel comes with  an example.env file that we can copy to create our own:
 
-# Step 3 — Setting Up the Application’s Dockerfile
+c.  Setting Up the Application’s Dockerfile
  
 I created a new Dockerfile with the following configuration and named it "Dockerfile.prod",attached in the this repository
 ![image](https://user-images.githubusercontent.com/57386428/115456927-99300100-a1d8-11eb-8f77-8fdd8aba3d5a.png)
      
-# Step 4 — Creating a Multi-Container Environment with Docker Compose 
+d. Creating a Multi-Container Environment with Docker Compose 
 
 I created a new docker-compose attached in this repository and named it "docker-compose-production.yml" 
 
 ![image](https://user-images.githubusercontent.com/57386428/115457025-be247400-a1d8-11eb-8909-1dc7fdbbe28d.png)
 
-# step 5-I run the application in production mode 
+e. I run the application in production mode 
 
 simply run docker-compose -f docker-compose.production.yml up -d to up the service.
 
