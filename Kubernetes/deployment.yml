@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravelvuejs-deployment
+  labels:
+    app: laravelvuejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravelvuejs
+  template:
+    metadata:
+      labels:
+        app: laravelvuejs
+    spec:
+      containers:
+      - name: laravelvuejs
+        image: iyanu27/laravelvuejsapplication
+        ports:
+        - containerPort: 80
+        envFrom:
+          - secretRef:
+              name: app-config
+
