@@ -1,6 +1,6 @@
 # SCA_FINAL_PROJECT
 
-This repository contains the Terraform(db.tf,main.tf,gke.tf),Kubernetes(deployment,yaml and service.yaml) ,Docker(dockercompose and dockerfile).
+This repository contains the Terraform(db.tf,main.tf,gke.tf),Kubernetes(deployment.yaml and service.yaml) ,Docker(dockercompose and dockerfile).
 
 # Deploying a 3 tier application frontend, API, database to Kubernetes cluster  using GCP
 
