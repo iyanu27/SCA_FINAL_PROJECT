@@ -1,5 +1,7 @@
 # SCA_FINAL_PROJECT
 
+This repository contains the Terraform(db.tf,main.tf,gke.tf),Kubernetes(deployment,yaml and service.yaml) ,Docker(dockercompose and dockerfile).
+
 # Deploying a 3 tier application frontend, API, database to Kubernetes cluster  using GCP
 
 I was able  to publish a simple yet functional setup for a dockerized app with Laravel backend and Vue.JS frontend.
@@ -10,14 +12,7 @@ To containerize an application refers to the process of adapting an application 
 
 In this project, i used docker Compose and dockerfile to containerize a Laravel application and vuejs for development. 
 
-# Prerequisites
-Ubuntu server
-Docker installed on your ubuntu  server,i used  this link https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04 
-
-Docker Compose installed on your server,i used this link https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
-
-
-## Create a SQL database and kubernetes cluster using Terraform ,the github to provision this is infrastructure and the step by step guide
+## PHASE 1- Create a SQL database and kubernetes cluster using Terraform 
 
 # Automating a GCP SQL Database in a Private Subnet with Terraform
 
@@ -111,7 +106,13 @@ resource "google_service_networking_connection" "private_vpc_connection" {
 ![image](https://user-images.githubusercontent.com/57386428/115313970-2025a080-a129-11eb-99d7-3f167c3f63c6.png)
 
 
- 
+# Prerequisites
+ Ubuntu server
+ Docker installed on your ubuntu  server,i used  this link 
+   https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04 
+
+Docker Compose installed on your server,i used this link 
+   https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
       
 ## PHASE 2-Dockerizing the laravel and vuejs application
