@@ -109,13 +109,15 @@ resource "google_service_networking_connection" "private_vpc_connection" {
     terraform init`
     
 2. After that go to connect and paste the following on cloud shell
+![image](https://user-images.githubusercontent.com/57386428/115622468-bf26d580-a2ac-11eb-822f-1799674972ab.png)
   
-    gcloud container clusters get-credentials my-first-gke-cluster --zone us-west1-a --project keen-clarity-309414
+  gcloud container clusters get-credentials sca-cluster --zone us-west1-a --project keen-clarity-309414
 3. Then install kubectl
     sudo apt-get install kubectl
 4. Then run the following to get the node
       kubectl get node
-     <img width="838" alt="gke" src="https://user-images.githubusercontent.com/57386428/113719550-94306500-96a2-11eb-9fc4-288898f56c5a.PNG">
+   ![image](https://user-images.githubusercontent.com/57386428/115622720-12008d00-a2ad-11eb-96be-b5b94deda5cd.png)
+
   
   
   =====================
