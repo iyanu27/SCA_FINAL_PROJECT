@@ -1,6 +1,6 @@
 #Client App
 FROM node:14.15.0 as vuejs
-LABEL authors="Nimat"
+LABEL authors="Iyanu"
 RUN mkdir -p /app/public
 RUN mkdir -p /var/www/html
 COPY package.json webpack.mix.js package-lock.json /app/
