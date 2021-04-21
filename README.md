@@ -114,6 +114,7 @@ resource "google_service_networking_connection" "private_vpc_connection" {
   gcloud container clusters get-credentials sca-cluster --zone us-west1-a --project keen-clarity-309414
 3. Then install kubectl
     sudo apt-get install kubectl
+    
 4. Then run the following to get the node
       kubectl get node
    ![image](https://user-images.githubusercontent.com/57386428/115622720-12008d00-a2ad-11eb-96be-b5b94deda5cd.png)
