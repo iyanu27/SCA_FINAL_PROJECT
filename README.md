@@ -22,8 +22,6 @@ In this project, i used docker Compose and dockerfile to containerize a Laravel 
 3. Google Compute Engine
 4. Terraform (for automating resource creation)
 
-A GCP project can have up to five VPC networks, and each Compute Engine instance belongs to one VPC network. If interested in the Terraform [GCP provider](https://www.terraform.io/docs/providers/google/index.html) docs or more generally about Terraform resources read [here](https://www.terraform.io/docs/configuration/resources.html).
-
 ### Terraform Installation
 1. Copy link address for [Terraform](https://www.terraform.io/downloads.html) download
   ```
@@ -106,6 +104,11 @@ resource "google_service_networking_connection" "private_vpc_connection" {
 ![image](https://user-images.githubusercontent.com/57386428/115313970-2025a080-a129-11eb-99d7-3f167c3f63c6.png)
 
 
+
+
+      
+## PHASE 2-Dockerizing the laravel and vuejs application
+
 # Prerequisites
  Ubuntu server
  Docker installed on your ubuntu  server,i used  this link 
@@ -113,9 +116,6 @@ resource "google_service_networking_connection" "private_vpc_connection" {
 
 Docker Compose installed on your server,i used this link 
    https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
-
-      
-## PHASE 2-Dockerizing the laravel and vuejs application
 
 a. Obtaining the Demo Laravel,Vuejs Application
 
