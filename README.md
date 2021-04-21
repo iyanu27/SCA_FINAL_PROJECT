@@ -103,10 +103,22 @@ resource "google_service_networking_connection" "private_vpc_connection" {
 
 ![image](https://user-images.githubusercontent.com/57386428/115313970-2025a080-a129-11eb-99d7-3f167c3f63c6.png)
 
-
-
-
-      
+# To deploy Google kubernetes cluster on GCP
+1. To provision the Kubernetes cluster i created the gke.tf 
+ 
+    terraform init`
+    
+2. After that go to connect and paste the following on cloud shell
+  
+    gcloud container clusters get-credentials my-first-gke-cluster --zone us-west1-a --project keen-clarity-309414
+3. Then install kubectl
+    sudo apt-get install kubectl
+4. Then run the following to get the node
+      kubectl get node
+     <img width="838" alt="gke" src="https://user-images.githubusercontent.com/57386428/113719550-94306500-96a2-11eb-9fc4-288898f56c5a.PNG">
+  
+  
+  =====================
 ## PHASE 2-Dockerizing the laravel and vuejs application
 
 # Prerequisites
