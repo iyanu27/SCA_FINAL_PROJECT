@@ -134,7 +134,7 @@ Docker Compose installed on your server,i used this link
 
 a. Obtaining the Demo Laravel,Vuejs Application
 
-Lets get started by fetching the demo Laravel application from its Github repository.
+First, i cloned the demo Laravel application from its Github repository.
 
          https://github.com/cretueusebiu/laravel-vue-spa
 
