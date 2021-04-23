@@ -159,6 +159,8 @@ e. I run the application in production mode
 simply run docker-compose -f docker-compose.production.yml up -d to up the service.
 
 ![image](https://user-images.githubusercontent.com/57386428/115457099-ddbb9c80-a1d8-11eb-8256-130dd261f4d4.png)
+![image](https://user-images.githubusercontent.com/57386428/115933442-bb798700-a443-11eb-8239-d89eea8ce408.png)
+
 
 simply run docker-compose -f docker-compose.production.yml down  to stop the service.
 
