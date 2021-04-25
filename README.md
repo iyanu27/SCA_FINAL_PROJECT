@@ -232,6 +232,19 @@ i.To access the kubernetes,i accessed it with the externalIpaddress:80
 
 
 ![image](https://user-images.githubusercontent.com/57386428/115466099-71469a80-a1e4-11eb-8f01-848ee7162cb6.png)
+![image](https://user-images.githubusercontent.com/57386428/116005715-15518c80-a5bd-11eb-928a-d952f7ecdfb1.png)
+![image](https://user-images.githubusercontent.com/57386428/116005766-403be080-a5bd-11eb-91cc-d34e8c3788ad.png)
+
+# PHASE 4- setup CI/CD to deploy application to kubernetes,i used Jenkins
+
+ a.Installed Jenkins on my VM
+ ![image](https://user-images.githubusercontent.com/57386428/116007376-6749e080-a5c4-11eb-8964-be3d41bb602a.png)
+![image](https://user-images.githubusercontent.com/57386428/116007518-f9ea7f80-a5c4-11eb-8ee2-a9c8ab35038c.png)
+
+b.Cloned the laravel repository
+https://github.com/iyanu27/laravel-vue-spa.git
+
+ 
 
 
     
@@ -242,6 +255,7 @@ i.To access the kubernetes,i accessed it with the externalIpaddress:80
 Installation of Google Kubernetes and deployment yaml
 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 https://scotch.io/tutorials/google-cloud-platform-i-deploy-a-docker-app-to-google-container-engine-with-kubernetes
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04
  
     
 
