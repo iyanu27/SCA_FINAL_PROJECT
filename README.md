@@ -241,12 +241,49 @@ i.To access the kubernetes,i accessed it with the externalIpaddress:80
  ![image](https://user-images.githubusercontent.com/57386428/116007376-6749e080-a5c4-11eb-8964-be3d41bb602a.png)
 ![image](https://user-images.githubusercontent.com/57386428/116007518-f9ea7f80-a5c4-11eb-8ee2-a9c8ab35038c.png)
 
-b.Cloned the laravel repository
+b.Forked the laravel repository
 https://github.com/iyanu27/laravel-vue-spa.git
+
+c. To deploy the application to kubernetes with Jenkins,I installed Google Kubernetes plugin on Jenkins
+
+![image](https://user-images.githubusercontent.com/57386428/116069154-edefd380-a63f-11eb-8250-bdabe6fa51c4.png)
+
+
+d.I Configured Jenkins User to Connect to the Google Kubernetes Cluster ,used this command;
+
+    $ sudo visudo -f /etc/sudoers
+    Then added jenkins ALL= NOPASSWD: ALL
+![image](https://user-images.githubusercontent.com/57386428/116067190-c7309d80-a63d-11eb-88de-f591609093cf.png)
+
+This will also allow the Jenkins User to run su (super user) commands without the need to input a password. Once this is done, i switch ed to the Jenkins user on the terminal.
+
+![image](https://user-images.githubusercontent.com/57386428/116067497-07901b80-a63e-11eb-8f1f-817ad5863798.png)
+
+e. Setup GCP and Docker Credentials on Jenkins
+
+I created a service account on GCP  enable the APIs needed by the Jenkins GKE plugin such as the 
+
+Compute Engine API
+Kubernetes Engine API
+Service Management API
+Cloud Resource Manager API
+
+
+I Login with the user that I created. On the left sidebar, click on ‘Manage Jenkins’. This opens the Management dashboard of Jenkins. Click on ‘Manage Credentials’.
+   
+f. Create and enabled a GitHub repository webhook
+
+Log in to GitHub repository. Note the HTTPS URL to the repository.
+Repository URL
+Click the "Settings" tab at the top of the repository page.
+Select the "Webhooks" sub-menu item. Click "Add webhook".
+In the "Payload URL" field, enter the URL http://35.238.27.123:8080/jenkins/github-webhook/
+
+![image](https://user-images.githubusercontent.com/57386428/116070852-f47f4a80-a641-11eb-81b3-1f6ccd556046.png)
 
  
 
-
+g.Create the Jenkins pipeline project for deployment into kubernetes
     
  Refrences:
  
