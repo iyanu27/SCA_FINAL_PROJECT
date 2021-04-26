@@ -314,7 +314,9 @@ Under  "General" tab on the project configuration page i checked the "GitHub pro
 ![image](https://user-images.githubusercontent.com/57386428/116072395-dfa3b680-a643-11eb-8df4-7f2beeaecdad.png)
 
  Under the Pipeline tab,i  added the GCP credentials and the docker hub and added the pipeline script as follows:
- pipeline {
+ 
+ ```
+  pipeline {
     agent any
     environment {
         PROJECT_ID = 'keen-clarity-309414'
@@ -392,9 +394,9 @@ Under  "General" tab on the project configuration page i checked the "GitHub pro
         }
     }    
 }
+```
 
-
- Refrences:
+ References:
  
  Installation of Google cloud SDK
  https://www.linuxtechi.com/setup-kubernetes-cluster-google-cloud-platform-gcp/
