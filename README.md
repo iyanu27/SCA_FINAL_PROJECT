@@ -314,6 +314,84 @@ Under  "General" tab on the project configuration page i checked the "GitHub pro
 ![image](https://user-images.githubusercontent.com/57386428/116072395-dfa3b680-a643-11eb-8df4-7f2beeaecdad.png)
 
  Under the Pipeline tab,i  added the GCP credentials and the docker hub and added the pipeline script as follows:
+ pipeline {
+    agent any
+    environment {
+        PROJECT_ID = 'keen-clarity-309414'
+        CLUSTER_NAME = 'sca-cluster'
+        LOCATION = 'us-west2'
+        CREDENTIALS_ID = 'gke'
+    }
+    stages {
+        stage("Checkout code") {
+            steps {
+                checkout scm
+            }
+        }
+        stage("Build image") {
+            steps {
+                script {
+                    myapp = docker.build("iyanu27/laravel-vuejs:${env.BUILD_ID}")
+                }
+            }
+        }
+        stage("Push image") {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                            myapp.push("latest")
+                            myapp.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }        
+        stage('Deploy to GKE') {
+            steps{
+                sh "sed -i 's/hello:latest/hello:${env.BUILD_ID}/g' deployment.yaml"
+                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
+            }
+        }
+    }    
+}
+               pipeline {
+    agent any
+    environment {
+        PROJECT_ID = 'keen-clarity-309414'
+        CLUSTER_NAME = 'sca-cluster'
+        LOCATION = 'us-west2'
+        CREDENTIALS_ID = 'gke'
+    }
+    stages {
+        stage("Checkout code") {
+            steps {
+                checkout scm
+            }
+        }
+        stage("Build image") {
+            steps {
+                script {
+                    myapp = docker.build("DOCKER-HUB-USERNAME/hello:${env.BUILD_ID}")
+                }
+            }
+        }
+        stage("Push image") {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                            myapp.push("latest")
+                            myapp.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }        
+        stage('Deploy to GKE') {
+            steps{
+                sh "sed -i 's/hello:latest/hello:${env.BUILD_ID}/g' deployment.yaml"
+                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
+            }
+        }
+    }    
+}
 
 
  Refrences:
