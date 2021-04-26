@@ -315,16 +315,7 @@ Under  "General" tab on the project configuration page i checked the "GitHub pro
 
  Under the Pipeline tab,i  added the GCP credentials and the docker hub and added the pipeline script as follows:
 
-![image](https://user-images.githubusercontent.com/57386428/116074874-26df7680-a647-11eb-88b2-6aade44b71e6.png)
 
-
-
-
-
-
-
-
-Select the "Build triggers" tab on the project configuration page and check the "GitHub hook trigger for GITScm polling" checkbox.
  Refrences:
  
  Installation of Google cloud SDK
