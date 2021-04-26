@@ -264,27 +264,67 @@ e. Setup GCP and Docker Credentials on Jenkins
 I created a service account on GCP  enable the APIs needed by the Jenkins GKE plugin such as the 
 
 Compute Engine API
+
 Kubernetes Engine API
+
 Service Management API
+
 Cloud Resource Manager API
 
 
+
 I Login with the user that I created. On the left sidebar, click on ‘Manage Jenkins’. This opens the Management dashboard of Jenkins. Click on ‘Manage Credentials’.
+
+For dockerhub credientials
+
+![image](https://user-images.githubusercontent.com/57386428/116071395-b6365b00-a642-11eb-8686-e8c99e5f6630.png)
+
+For GCP credientials
+
+![image](https://user-images.githubusercontent.com/57386428/116071624-f695d900-a642-11eb-9213-ffbb3d5b8f5c.png)
+
+![image](https://user-images.githubusercontent.com/57386428/116071692-0a413f80-a643-11eb-807a-0a8301825da3.png)
    
 f. Create and enabled a GitHub repository webhook
 
 Log in to GitHub repository. Note the HTTPS URL to the repository.
+
 Repository URL
+
 Click the "Settings" tab at the top of the repository page.
+
 Select the "Webhooks" sub-menu item. Click "Add webhook".
-In the "Payload URL" field, enter the URL http://35.238.27.123:8080/jenkins/github-webhook/
+
+In the "Payload URL" field, enter the URL http://35.238.27.123:8080
 
 ![image](https://user-images.githubusercontent.com/57386428/116070852-f47f4a80-a641-11eb-81b3-1f6ccd556046.png)
 
+g. Create the Jenkins pipeline project for deployment into kubernetes 
+  Log in to Jenkins (if you're not already logged in).
+ Click "New item". called the project laravel-vuejs set the project type to "Pipeline". Click "OK" to proceed.
  
-
-g.Create the Jenkins pipeline project for deployment into kubernetes
+![image](https://user-images.githubusercontent.com/57386428/116071905-496f9080-a643-11eb-813a-d0f7cd2e7839.png)
     
+Under  "General" tab on the project configuration page i checked the "GitHub project" checkbox. Enter the complete URL to your GitHub project.
+
+ Checked the github hook trigger for GITscm pooling
+  
+![image](https://user-images.githubusercontent.com/57386428/116072251-b420cc00-a643-11eb-90a4-4c34d7178d33.png)
+
+![image](https://user-images.githubusercontent.com/57386428/116072395-dfa3b680-a643-11eb-8df4-7f2beeaecdad.png)
+
+ Under the Pipeline tab,i  added the GCP credentials and the docker hub and added the pipeline script as follows:
+
+![image](https://user-images.githubusercontent.com/57386428/116074874-26df7680-a647-11eb-88b2-6aade44b71e6.png)
+
+
+
+
+
+
+
+
+Select the "Build triggers" tab on the project configuration page and check the "GitHub hook trigger for GITScm polling" checkbox.
  Refrences:
  
  Installation of Google cloud SDK
